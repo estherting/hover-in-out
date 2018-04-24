@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Hover In/Out</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('img').hover(function(){
+          var temp = $(this).attr('src');
+          var altVal = $(this).attr('data-alt-src');
+          $(this).attr('src', altVal);
+          $(this).attr('data-alt-src', temp)
+        }, function() {
+          var temp = $(this).attr('src');
+          var altVal = $(this).attr('data-alt-src');
+          $(this).attr('src', altVal);
+          $(this).attr('data-alt-src', temp)
+        })
+      })
+    </script>
+  </head>
+  <body>
+    <h1>My Favorite Kate Spade Dresses</h1>
+    <img src="img/dress1-front.png" data-alt-src="img/dress1-back.png">
+    <img src="img/dress2-front.png" data-alt-src="img/dress2-back.png">
+    <img src="img/dress3-front.png" data-alt-src="img/dress3-back.png">
+    <img src="img/dress4-front.png" data-alt-src="img/dress4-back.png">
+    <img src="img/dress5-front.png" data-alt-src="img/dress5-back.png">
+    <img src="img/dress6-front.png" data-alt-src="img/dress6-back.png">
+  </body>
+</html>
